@@ -1,0 +1,15 @@
+<select [(ngModel)]="selectedLocale" (ngModelChange)="selectChange()">
+    <option [ngValue]="EN_CA">en</option>
+    <option [ngValue]="FR_CA">fr</option>
+</select>
+  
+<ng-container *transloco="let t">
+    <h1>{{ t("title") }}</h1>
+  
+    <p>{{ t("date") }} : {{ date | date: "short":"":selectedLocale }}</p>
+  
+    <p>
+      {{ t("amount") }}:
+      {{ amount | currency: "CAD":"symbol":"":selectedLocale }}
+    </p>
+</ng-container>
