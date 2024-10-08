@@ -1,6 +1,6 @@
 # Transloco Démo
 
-```ng serve````
+```ng serve```
 
 ## Démo
 
